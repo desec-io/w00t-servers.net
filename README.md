@@ -11,3 +11,5 @@ Instructions (Ubuntu 24.04):
 3. In a `screen`, run `sh capture.sh`. This will store up to 10G of DNS traffic in /tmp/.
 
 Traffic statistics are available at https://metronome.powerdns.com/?server=dnsdist.desec-w00t-a.main&beginTime=-3600 (or similar, depending on step 2).
+
+To watch queries, check out `watch.sh`.
