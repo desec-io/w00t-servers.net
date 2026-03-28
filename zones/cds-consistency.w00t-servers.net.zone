@@ -1,0 +1,17 @@
+;; Zone dump (Knot DNS 3.5.3)
+cds-consistency.w00t-servers.net. 86400	SOA	a.w00t-servers.net. peter.desec.io. 2026012204 14400 7200 1209600 86400
+cds-consistency.w00t-servers.net. 86400	NS	a.w00t-servers.net.
+cds-consistency.w00t-servers.net. 86400	NS	b.w00t-servers.net.
+cds-consistency.w00t-servers.net. 86400	DNSKEY	257 3 13 hgsRobDV2PhSLcoJ0+3FZ5wyT4ZX/zat4cbvFJ4f2OgvtFKmVNNeiB/z8PxwxUNa3kkS+T9Uo3Y3SenyKXhP/Q==
+cds-consistency.w00t-servers.net. 86400	CDS	1765 13 2 E5E2AD0F1660FE577EE079F9419EC228E771D90BB8EC9B64ADED4412A3508227
+cds-consistency.w00t-servers.net. 86400	CDS	61655 13 4 C838A5C66FCBF83B8B6B50C3CEEC3524777FE4AF8A9FE0172ECAD24248B0CA1A216DD0D538F20C130DD3059538204B04
+cds-consistency.w00t-servers.net. 86400	CDNSKEY	257 3 8 AwEAAbs3+etzy3iSc9G3gLmhq2b/h4upWy4W7FzxGdlkm0nFVOihP0oT12eANMERD0TabBZ2EnWS/WYNC6/L3Klch0LlT2WyvGJMJBqO7E/j+qtZAZzjGqnLVMRwYX41S6+TE2sOsqQVRNgnYsOwKXmO/3y4NYi8OEJRDouBNMEAv5zG5gLPBr3Ww8yMNz/4GC+6/N+ln6irN5EVsPsXCr2HN2/9DK+WCFrgsUqMylPPxjf3MinPKSoNI3JA5jAUZG5oZbnhNYTVSSwKgJZmQa+t7WR7mE9fuboNKfALXRXUryQfgUIHrg+lhK/lLYi6GrNXvuKzHQUYbXGGsE3HIB6P++U=
+;; DNSSEC signatures
+cds-consistency.w00t-servers.net. 86400	RRSIG	NS 13 3 86400 20260411143915 20260328130915 1765 cds-consistency.w00t-servers.net. zNC7IX/12VNfkoH0ZuOTGDItxL9gdrTZrt99PAppDJUhhRJKtpojmq7ld5KrjBR++CoPPCTgjt4M0eyMXbtajg==
+cds-consistency.w00t-servers.net. 86400	RRSIG	SOA 13 3 86400 20260411151428 20260328134428 1765 cds-consistency.w00t-servers.net. Z1UcDpxgOfQP2TZgcjo0LeTiyF/2Izzoz9FwZ0EOXgwDori149ofa2YyqKDUV4ml67SUmAkAxV5ixQnM17DLUw==
+cds-consistency.w00t-servers.net. 86400	RRSIG	NSEC 13 3 86400 20260411151300 20260328134300 1765 cds-consistency.w00t-servers.net. Hx9tvplYl6u5sF5pquCrkt5MBCDxZDLMs8wh7m0uZzCD9hno5TGr8K17cVj/OV1oTMM8aMIE+7J5/hNN1toZ5g==
+cds-consistency.w00t-servers.net. 86400	RRSIG	DNSKEY 13 3 86400 20260411143915 20260328130915 1765 cds-consistency.w00t-servers.net. IXNX4eSQ3CwCI5CY972vVgT/Gdp8aMdJmZbVi5DammTUP7oDPWgvLIbuKGDQtfyoO8eiULewxBcULaAqnT8bcg==
+cds-consistency.w00t-servers.net. 86400	RRSIG	CDS 13 3 86400 20260411151300 20260328134300 1765 cds-consistency.w00t-servers.net. Y5RCNWD0GWTz+yyQ0dPxzr3H/nj3poN/b2NNIi8YiCrntnGLnpnyUx6U6o6BCSayN6zDNIwy7UkwguaFL2npfA==
+cds-consistency.w00t-servers.net. 86400	RRSIG	CDNSKEY 13 3 86400 20260411151428 20260328134428 1765 cds-consistency.w00t-servers.net. 9iN9/xDOheDZx5Dxei1CL7GbbVJmkCpSURCKS0XR45EMGhX5sSpIscP5jLeCkRThe3aT6pjUbUgMEJybSNArtQ==
+;; DNSSEC NSEC chain
+cds-consistency.w00t-servers.net. 86400	NSEC	cds-consistency.w00t-servers.net. NS SOA RRSIG NSEC DNSKEY CDS CDNSKEY
