@@ -1,0 +1,11 @@
+services:
+  knot:
+    image: cznic/knot:mod-append-3.5
+    command: knotd
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    volumes:
+      - ./conf:/config
+      - ./zones:/storage
+    restart: unless-stopped
