@@ -1,11 +1,27 @@
 services:
+  dnstap-capture:
+    build: ./dnstap-capture
+    command:
+      - -s
+      - "3600"
+    volumes:
+      - dnstap-socket:/run/dnstap
+      - ./dnstap-spool:/spool/dnstap
+    restart: unless-stopped
+
   knot:
     image: cznic/knot:mod-append-3.5
     command: knotd
+    depends_on:
+      - dnstap-capture
     ports:
       - "53:53/udp"
       - "53:53/tcp"
     volumes:
       - ./conf:/config
       - ./zones:/storage
+      - dnstap-socket:/run/dnstap
     restart: unless-stopped
+
+volumes:
+  dnstap-socket:
