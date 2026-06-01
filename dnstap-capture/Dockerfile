@@ -6,6 +6,6 @@ RUN apt-get update \
 
 ENTRYPOINT ["fstrm_capture", \
   "-t", "protobuf:dnstap.Dnstap", \
-  "-u", "/run/dnstap/knot.sock", \
-  "-w", "/spool/dnstap/knot-%Y%m%d-%H%M%S.fstrm", \
+  "-u", "/run/dnstap/dnsdist.sock", \
+  "-w", "/spool/dnstap/dnsdist-%Y%m%d-%H%M%S.fstrm", \
   "--gmtime"]

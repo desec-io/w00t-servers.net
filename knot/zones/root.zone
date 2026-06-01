@@ -1,0 +1,7 @@
+.			86400	IN	SOA	o.w00t-servers.net. peter.desec.io. 2026020502 1800 900 604800 86400
+.			86400	IN	NS	o.w00t-servers.net.
+.			86400	IN	NS	p.w00t-servers.net.
+o.w00t-servers.net.	3600	IN	A	95.217.243.58
+o.w00t-servers.net.	3600	IN	AAAA	2a01:4f9:c012:5daa::14
+p.w00t-servers.net.	3600	IN	A	49.13.33.167
+p.w00t-servers.net.	3600	IN	AAAA	2a01:4f8:1c1a:3ca0::14

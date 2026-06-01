@@ -3,21 +3,36 @@ services:
     build: ./dnstap-capture
     command:
       - -s
-      - "3600"
+      - "300"
     volumes:
       - dnstap-socket:/run/dnstap
       - ./dnstap-spool:/spool/dnstap
     restart: unless-stopped
 
   knot:
-    image: cznic/knot:mod-append-3.5
+    image: cznic/knot:v3.4.10
     command: knotd
+    ports:
+      - "127.0.0.1:5353:5353/udp"
+      - "127.0.0.1:5353:5353/tcp"
+    volumes:
+      - ./knot/conf:/config
+      - ./knot/zones:/storage
+    restart: unless-stopped
+
+  dnsdist:
+    image: powerdns/dnsdist-19:1.9.14
     network_mode: host
+    user: "0:0"
+    ulimits:
+      nofile: 16384
+    environment:
+      - CARBON_INSTANCE
     depends_on:
       - dnstap-capture
+      - knot
     volumes:
-      - ./conf:/config
-      - ./zones:/storage
+      - ./dnsdist/conf:/etc/dnsdist/conf.d
       - dnstap-socket:/run/dnstap
     restart: unless-stopped
 
