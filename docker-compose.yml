@@ -9,6 +9,16 @@ services:
       - ./dnstap-spool:/spool/dnstap
     restart: unless-stopped
 
+  uploader:
+    build: ./uploader
+    restart: unless-stopped
+    environment:
+      - RSYNC_DEST
+      - INTERVAL_SECONDS=300
+    volumes:
+      - ./dnstap-spool:/spool/dnstap
+      - ~/.ssh:/root/.ssh:ro
+
   knot:
     image: cznic/knot:v3.4.10
     command: knotd
